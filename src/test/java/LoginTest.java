@@ -27,7 +27,7 @@ public class LoginTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5), Duration.ofMillis(300));
     }
     @Test
-    public void SignInTest() {
+    public void signInTest() {
         By signInlocator = By.xpath("//li/a[contains(text(), 'Sign In')]");
         WebElement signInMain = driver.findElement(signInlocator);
         signInMain.click();

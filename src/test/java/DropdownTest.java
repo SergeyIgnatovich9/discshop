@@ -22,7 +22,7 @@ public class DropdownTest {
     }
 
     @Test
-    public void DropdownOptionsTest() {
+    public void dropdownOptionsTest() {
         WebElement dropdown = driver.findElement(DROPDOWN);
         Select select = new Select(dropdown);
         select.selectByIndex(1);

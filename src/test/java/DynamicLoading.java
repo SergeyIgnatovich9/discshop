@@ -29,7 +29,7 @@ public class DynamicLoading {
     }
 
     @Test
-    public void DynamicLoadTest() {
+    public void dynamicLoadTest() {
         driver.findElement(LINK_1).click();
         driver.findElement(START_BUTTON).click();
         WebElement finishMessage = driver.findElement(FINISH_MESSAGE);
