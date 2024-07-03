@@ -13,6 +13,7 @@ public class BaseTest {
         DriverManager.getDriver().get(BASE_URL);
         homePage = new HomePage();
     }
+
     @AfterMethod
     public void tearDown() {
         DriverManager.tearDown();

@@ -27,7 +27,6 @@ public class TextEntryTest {
         contentBody.clear();
         contentBody.sendKeys(CUSTOM_TEXT);
         Assert.assertEquals(CUSTOM_TEXT, contentBody.getText());
-
     }
 
     @AfterMethod
