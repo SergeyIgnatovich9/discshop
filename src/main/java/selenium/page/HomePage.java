@@ -1,18 +1,34 @@
 package selenium.page;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage {
-    private static final By CHECKBOX_LINK = By.cssSelector("[href *='checkboxes']");
-    private static final By DATA_TABLE_LINK = By.cssSelector("[href *='tables']");
 
-    public CheckboxPage navigateToCheckboxPage() {
-        driver.findElement(CHECKBOX_LINK).click();
-        return new CheckboxPage();
+    @FindBy(xpath = "//li/a[contains(text(), 'Sign In')]")
+    private WebElement signInLink;
+    @FindBy(xpath = "//span[contains(text(),'Welcome')]")
+    private WebElement welcomeMessage;
+    @FindBy(xpath = "//a[contains (text(), 'Create an Account')]")
+    private WebElement createAnAccountLink;
+
+    public HomePage() {
+        super();
+        PageFactory.initElements(driver, this);
     }
 
-    public DataTablesPage navigateToDataTablesPage() {
-        driver.findElement(DATA_TABLE_LINK).click();
-        return new DataTablesPage();
+    public LoginPage clickSignInLink() {
+        signInLink.click();
+        return new LoginPage();
+    }
+
+    public CreateAnAccountPage clickCreateAnAccountLink() {
+        createAnAccountLink.click();
+        return new CreateAnAccountPage();
+    }
+
+    public boolean welcomMessageDisplayed() {
+        return welcomeMessage.isDisplayed();
     }
 }

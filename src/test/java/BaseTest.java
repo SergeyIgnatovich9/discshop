@@ -4,7 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import selenium.driver.DriverManager;
 import selenium.page.HomePage;
 
-public class BaseTest {
+public class BaseTest extends HomePage {
     private static final String BASE_URL = TestConfig.get("url.home");
     protected HomePage homePage;
 
