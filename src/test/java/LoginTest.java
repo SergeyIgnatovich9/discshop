@@ -1,11 +1,13 @@
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import selenium.config.TestConfig;
 import selenium.data.DataProviderClass;
 import selenium.page.LoginPage;
+import selenium.page.TestListener;
 
+@Listeners(TestListener.class)
 public class LoginTest extends BaseTest {
     private static final String EMAIL = TestConfig.get("login.email");
     private static final String PASSWORD = TestConfig.get("login.password");
@@ -26,7 +28,7 @@ public class LoginTest extends BaseTest {
         loginPage.fillInEmail(EMAIL);
         loginPage.fillInPassword(PASSWORD);
         homePage = loginPage.clickSingInButton();
-        Assert.assertTrue(homePage.welcomMessageDisplayed());
+        Assert.assertFalse(homePage.welcomMessageDisplayed());
     }
 
     @Test
