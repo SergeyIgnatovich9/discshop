@@ -1,7 +1,9 @@
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import selenium.config.TestConfig;
+import selenium.data.DataProviderClass;
 import selenium.page.LoginPage;
 
 public class LoginTest extends BaseTest {
@@ -50,5 +52,13 @@ public class LoginTest extends BaseTest {
         loginPage.clickSingInButton();
         Assert.assertEquals(loginPage.getEmailErrorMessageText(),
                 INCORRECT_EMAIL_ERROR_MESSAGE);
+    }
+
+    @Test(dataProvider = "invalidSignInData", dataProviderClass = DataProviderClass.class)
+    public void invalidSignInDDTTest(String invalidPassword) {
+        loginPage.fillInEmail(EMAIL);
+        loginPage.fillInPassword(invalidPassword);
+        homePage = loginPage.clickSingInButton();
+        Assert.assertEquals(loginPage.getErrorMessageWrongCredsText(), WRONG_CREDS_ERROR_MESSAGE);
     }
 }
