@@ -1,0 +1,1 @@
+{"uuid":"4e8ad7f9-1d4b-41d7-a6bc-8a0f38a24928","name":"CreateAnAccountTest.getData","children":["700eb47d-b665-4520-87b1-3306253e6196"],"description":"","befores":[{"name":"getData","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1720640134672,"stop":1720640135208}],"afters":[],"start":1720640134672,"stop":1720640135208}

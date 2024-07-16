@@ -1,0 +1,26 @@
+-
+  #0
+  phoneNumber: 511167027
+  street: Nowodworcowa
+  city: Gdynia
+  state: pomorskie
+  postalCode: 81-581
+  country: Poland
+-
+  #1
+  phoneNumber: 511167027
+  street: Wolska
+  city: Warsaw
+  state: mazowieckie
+  postalCode: 95-271
+  country: Poland
+-
+  #2
+  phoneNumber: 5745989
+  street: Mendeleeva
+  city: Minsk
+  state: mazowieckie
+  postalCode: 222410
+  country: Belarus
+
+

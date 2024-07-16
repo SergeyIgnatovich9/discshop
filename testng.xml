@@ -2,9 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Regression">
-    <test name="Login Tests">
+    <test name="Account Tests">
         <classes>
+            <class name="CreateAnAccountTest"/>
             <class name="LoginTest"/>
+            <class name="AddAddressTest"/>
+        </classes>
+    </test>
+    <test name="Functional Tests">
+        <classes>
+            <class name="AddToWishListTest"/>
+            <class name="AddProductToCartTest"/>
         </classes>
     </test>
 </suite>
